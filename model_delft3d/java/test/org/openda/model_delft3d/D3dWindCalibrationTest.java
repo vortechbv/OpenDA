@@ -37,7 +37,7 @@ public class D3dWindCalibrationTest extends TestCase {
     private OpenDaTestSupport testData;
 
     protected void setUp() throws IOException {
-    	testData = new OpenDaTestSupport(D3dWindCalibrationTest.class,"public","model_delft3d");
+    	testData = new OpenDaTestSupport(D3dWindCalibrationTest.class,"model_delft3d");
 
         testRunDataDir = new File(testData.getTestRunDataDir(), "test_4");
 
@@ -51,7 +51,7 @@ public class D3dWindCalibrationTest extends TestCase {
 	public void tstDudD3d() throws IOException {
     	String configFileName=null;
     	if (!BBUtils.RUNNING_ON_WINDOWS) {
-    		if(System.getProperty("sun.arch.data.model").equals("64")){
+    		if(BBUtils.RUNNING_ON_64bit){
     			configFileName="kalib04-15_linux64_gnu.oda";
     		}else{
     			//no testing on linux 32-bit

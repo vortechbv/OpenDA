@@ -22,7 +22,6 @@ package org.openda.model_dflowfm;
 import junit.framework.TestCase;
 
 import org.openda.interfaces.IExchangeItem;
-import org.openda.interfaces.IPrevExchangeItem;
 import org.openda.utils.OpenDaTestSupport;
 
 import java.io.File;
@@ -37,7 +36,7 @@ public class DFlowFMRoughParamsTest  extends TestCase {
     private OpenDaTestSupport testData;
 
     protected void setUp() throws IOException {
-    	testData = new OpenDaTestSupport(DFlowFMRoughParamsTest.class,"public","model_dflowfm_blackbox");
+    	testData = new OpenDaTestSupport(DFlowFMRoughParamsTest.class,"model_dflowfm_blackbox");
         testRunDataDir = testData.getTestRunDataDir();
     }
 
